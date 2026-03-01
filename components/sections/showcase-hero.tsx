@@ -54,15 +54,17 @@ export function ShowcaseHero() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Background Image */}
-          <Image
-            src={showcaseSlides[currentSlide].image}
-            alt={showcaseSlides[currentSlide].title}
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
-          />
+          {/* Background Image Container */}
+          <div className="absolute inset-0">
+            <Image
+              src={showcaseSlides[currentSlide].image}
+              alt={showcaseSlides[currentSlide].title}
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
+            />
+          </div>
 
           {/* Dark gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent" />
